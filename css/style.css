@@ -1,0 +1,35 @@
+/*****************************************************
+CSS GENERAL
+*****************************************************/
+
+:root {
+    --wrapper_top_bg_color: #009688;
+    --wrapper_main_bg_color: #dadbd3;
+}
+
+/*****************************************************
+CSS UTILITIES
+*****************************************************/
+
+.grid {
+    border: 2px solid;
+}
+
+/*****************************************************
+CSS "Boolzapp"
+*****************************************************/
+
+#wrapper_top {
+    height: 8rem;
+    background-color: var(--wrapper_top_bg_color);
+}
+
+#wrapper_main {
+    height: calc(100% - 8rem);
+    background-color: var(--wrapper_main_bg_color);
+}
+
+#boolzapp {
+    width: 60%;
+    height: 100%;
+}

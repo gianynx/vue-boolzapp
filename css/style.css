@@ -22,14 +22,18 @@ CSS "Boolzapp"
 #wrapper_top {
     height: 8rem;
     background-color: var(--wrapper_top_bg_color);
+    z-index: 0;
 }
 
-#wrapper_main {
+/* #wrapper_main {
     height: calc(100% - 8rem);
     background-color: var(--wrapper_main_bg_color);
-}
+} */
 
 #boolzapp {
-    width: 60%;
-    height: 100%;
+    width: 1100px;
+    height: 30rem;
+    position: relative;
+    background-color: black;
+    z-index: 1;
 }

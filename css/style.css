@@ -8,6 +8,8 @@ CSS GENERAL
     --top_left_right_content: #202c33;
     --icons_color: #b1b1b1;
     --notifications_div_color: #8edafc;
+    --bell_slash_div_color: #f2fbff;
+    --main_left_content: #111b21;
 }
 
 body {
@@ -64,7 +66,7 @@ CSS "Boolzapp"
     width: 50%;
 }
 
-.my_avatar_img {
+.rounded_img {
     width: 2.5rem;
     height: 2.5rem;
 }
@@ -85,4 +87,35 @@ CSS "Boolzapp"
 #notifications {
     height: 4.5rem;
     background-color: var(--notifications_div_color);
+}
+
+#bell_slash {
+    background-color: var(--bell_slash_div_color);
+}
+
+.fa-bell-slash {
+    color: var(--notifications_div_color);
+}
+
+#receive_notifications {
+    font-size: 13px;
+}
+
+#active_notifications {
+    font-size: 10px;
+}
+
+#main_left_content {
+    height: calc(100% - 8.5rem);
+    background-color: var(--main_left_content);
+}
+
+#search_chat {
+    height: 3rem;
+    border-bottom: 1px solid var(--icons_color);
+}
+
+#search_start_chat {
+    width: 80%;
+    height: 2rem;
 }

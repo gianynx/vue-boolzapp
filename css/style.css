@@ -163,3 +163,8 @@ CSS "Boolzapp"
     width: 3.7rem;
     height: 3.7rem;
 }
+
+#main_right_content {
+    height: 32.5rem;
+    background-color: black;
+}

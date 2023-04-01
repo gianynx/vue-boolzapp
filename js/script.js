@@ -173,6 +173,6 @@ createApp({
                     ],
                 }
             ]
-        }
+        };
     }
 }).mount('#app');

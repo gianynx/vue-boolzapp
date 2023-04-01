@@ -116,6 +116,18 @@ CSS "Boolzapp"
 }
 
 #search_start_chat {
-    width: 80%;
-    height: 2rem;
+    width: 92%;
+    height: 1.9rem;
+    background-color: var(--icons_color);
+    border-radius: 6px;
+    border-style: none;
+    background-image: url(../img/search.svg);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: 3%;
+    padding-left: 2.5rem;
+}
+
+#search_start_chat:focus {
+    outline: none;
 }

@@ -10,6 +10,8 @@ CSS GENERAL
     --notifications_div_color: #8edafc;
     --bell_slash_div_color: #f2fbff;
     --main_left_content: #111b21;
+    --chat_box_focus: #2a3942;
+    --chat_box_hover: #202c33;
 }
 
 body {
@@ -48,13 +50,13 @@ CSS "Boolzapp"
 
 #left_content {
     width: 38%;
-    border: 1px solid var(--icons_color);
+    border: 1px solid rgb(237, 237, 237, 0.3);
     border-right: none;
 }
 
 #right_content {
     width: 62%;
-    border: 1px solid var(--icons_color);
+    border: 1px solid rgb(237, 237, 237, 0.3);
 }
 
 #top_left_content, #top_right_content {
@@ -112,11 +114,11 @@ CSS "Boolzapp"
 
 #search_chat {
     height: 3rem;
-    border-bottom: 1px solid var(--icons_color);
+    border-bottom: 1px solid rgb(237, 237, 237, 0.3);
 }
 
 #search_start_chat {
-    width: 92%;
+    width: 91.5%;
     height: 1.9rem;
     background-color: var(--icons_color);
     border-radius: 6px;
@@ -130,4 +132,34 @@ CSS "Boolzapp"
 
 #search_start_chat:focus {
     outline: none;
+}
+
+.chat_container {
+    overflow-y: auto;
+    max-height: calc(100% - 3rem);
+}
+
+.chat_container ul li {
+    border-bottom: 1px solid rgb(237, 237, 237, 0.3);
+}
+
+.chat_box {
+    height: 4rem;
+}
+
+.chat_box:focus {
+    background-color: var(--chat_box_focus);
+}
+
+.chat_box:not(:focus):hover {
+    background-color: var(--chat_box_hover);
+}
+
+.time {
+    font-size: 10px;
+}
+
+.chat_rounded_img {
+    width: 3.7rem;
+    height: 3.7rem;
 }

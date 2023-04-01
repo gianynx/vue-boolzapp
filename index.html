@@ -49,6 +49,22 @@
                                 <input id="search_start_chat" class="small" type="text" placeholder="Cerca o inizia una nuova chat"></input>
                                 <a href="#"><i class="fa-solid fa-bars-staggered"></i></a>
                             </div>
+                            <div class="chat_container w-100">
+                                <ul class="list-unstyled">
+                                    <li v-for="contact in contacts" :key="contact.id">
+                                        <a href="#" class="chat_box d-flex align-items-center position-relative text-decoration-none pt-2">
+                                            <div class="chat_rounded_img mx-3">
+                                                <img class="w-100 rounded-circle" :src="contact.avatar" alt="avatar_img">
+                                            </div>
+                                            <div class="d-flex flex-column w-100 pb-1">
+                                                <div class="text-white">{{contact.name}}</div>
+                                                <div class="small text-white">Ultimo messaggio inviato</div>
+                                            </div>
+                                            <span class="time text-white position-absolute top-0 end-0 mx-3 pt-2">12:00</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div id="right_content">

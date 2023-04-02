@@ -21,7 +21,7 @@ CSS UTILITIES
 *****************************************************/
 
 .grid {
-    border: 2px solid;
+    border: 2px solid white;
 }
 
 /*****************************************************
@@ -32,20 +32,13 @@ CSS "Boolzapp"
     background-color: var(--main_left_content);
 }
 
-#wrapper_top {
-    height: 8rem;
-}
-
 #wrapper_main {
     height: calc(100% - 8rem);
 }
 
 #boolzapp {
-    width: 1100px;
+    width: 1270px;
     height: 41rem;
-    position: absolute;
-    top: 1rem;
-    left: 9rem;
 }
 
 #left_content {
@@ -55,6 +48,7 @@ CSS "Boolzapp"
 
 #right_content {
     width: 62%;
+    height: 41rem;
 }
 
 #top_left_content, #top_right_content {
@@ -163,7 +157,7 @@ CSS "Boolzapp"
 }
 
 #main_right_content {
-    height: 33.2rem;
+    height: 80%;
     /* overflow-y: auto; */
     background-image: url(../img/dark_bg.jpg);
     background-size: contain;
@@ -171,13 +165,20 @@ CSS "Boolzapp"
 }
 
 #bottom_right_content {
-    height: calc(100% - 37.2rem);
+    height: calc(100% - 37rem);
     background-color: var(--top_left_right_content);
+    position: absolute;
+    bottom: 21px;
+    left: 0;
+    right: 0;
+}
+
+.fa-face-grin-wide, .fa-paperclip {
+    padding-left: 15px;
 }
 
 #chat_write_message {
-    width: 100%;
-    height: 2.3rem;
+    height: 2.6rem;
     background-color: var(--chat_box_focus);
     border-radius: 6px;
     border-style: none;
@@ -185,5 +186,5 @@ CSS "Boolzapp"
 }
 
 .fa-microphone {
-    padding-right: 8px;
+    padding-right: 11px;
 }

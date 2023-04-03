@@ -58,9 +58,11 @@
                                             </div>
                                             <div class="d-flex flex-column w-100 pb-1">
                                                 <div class="text-white">{{contact.name}}</div>
-                                                <div class="small text-white">Ultimo messaggio inviato</div>
+                                                <div if="contacts.messages.status === 'sent'" v-for="msg in contacts.messages" :key(msg.id) class="small text-white">{{msg.message}}</div>
                                             </div>
-                                            <span class="time text-white position-absolute top-0 end-0 mx-3 pt-2" v-for="(time, index) in contacts.messages" :key="index">{{time.date}}</span>
+                                            <div class="time text-white position-absolute top-0 end-0 mx-3 pt-2">
+                                                <span>{{contact.lastAccess}}</span>
+                                            </div>
                                         </a>
                                     </li>
                                 </ul>

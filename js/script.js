@@ -186,13 +186,23 @@ createApp({
             selectedContact: {
                 name: '',
                 avatar: ''
-            },
+            }
         };
     },
     methods: {
         selectChat(contact) {
             this.selectedContact.name = contact.name,
             this.selectedContact.avatar = contact.avatar
+        },
+        getLastMessage(index) {
+            const lastMessage = this.contacts[index].messages.filter((e) => {
+                return e.status === 'sent';
+            });
+            if (lastMessage.length > 0) {
+                return lastMessage[lastMessage.length - 1].message;
+            } else {
+                return '';
+            };
         }
     },
     mounted() {

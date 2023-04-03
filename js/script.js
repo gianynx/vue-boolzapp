@@ -178,7 +178,7 @@ createApp({
             selectedContact: {
                 name: '',
                 avatar: ''
-            }
+            },
         };
     },
     methods: {
@@ -188,7 +188,7 @@ createApp({
         }
     },
     mounted() {
-        this.contacts.name = selectedContact.name,
-        this.contacts.avatar = selectedContact.avatar
+        this.selectedContact.name = this.contacts[0].name,
+        this.selectedContact.avatar = this.contacts[0].avatar
     }
 }).mount('#app');

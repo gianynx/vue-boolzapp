@@ -60,7 +60,7 @@
                                                 <div class="text-white">{{contact.name}}</div>
                                                 <div class="small text-white">Ultimo messaggio inviato</div>
                                             </div>
-                                            <span class="time text-white position-absolute top-0 end-0 mx-3 pt-2">12:00</span>
+                                            <span class="time text-white position-absolute top-0 end-0 mx-3 pt-2" v-for="(time, index) in contacts.messages" :key="index">{{time.date}}</span>
                                         </a>
                                     </li>
                                 </ul>

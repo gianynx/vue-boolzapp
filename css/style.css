@@ -160,10 +160,10 @@ CSS "Boolzapp"
 
 #main_right_content {
     height: 80%;
-    /* overflow-y: auto; */
-    /* background-image: url(../img/dark_bg.jpg); */
+    overflow-y: auto;
+    /* background-image: url(../img/dark_bg.jpg);
     background-size: contain;
-    opacity: 0.5;
+    opacity: 0.5; */
 }
 
 .received_message {

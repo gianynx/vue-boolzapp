@@ -3,6 +3,7 @@ CSS GENERAL
 *****************************************************/
 
 :root {
+    --primary_color: #ffffff;
     --top_left_right_content: #202c33;
     --icons_color: #b1b1b1;
     --notifications_div_color: #8edafc;
@@ -10,6 +11,7 @@ CSS GENERAL
     --main_left_content: #111b21;
     --chat_box_focus: #2a3942;
     --chat_box_hover: #202c33;
+    --sent_message: #005c4b;
 }
 
 body {
@@ -164,21 +166,31 @@ CSS "Boolzapp"
     opacity: 0.5;
 }
 
-.container_message {
-    background-color: var(--icons_color);
-    position: absolute;
-    top: 30px;
-    left: 60px;
+.msg_container_received {
     border-radius: 11px;
-    padding: 5px 20px 5px 10px;
+    padding: 5px 10px;
+    background-color: var(--main_left_content);
+    position: absolute;
+    top: 7rem;
+    left: 4.5rem;
+    font-size: 12px;
+    color: var(--primary_color);
 }
 
-.message {
-    color: var(--main_left_content);
+.msg_container_sent {
+    border-radius: 11px;
+    padding: 5px 10px;
+    background-color: var(--sent_message);
+    position: absolute;
+    top: 30px;
+    right: 4.5rem;
+    font-size: 12px;
+    color: var(--primary_color);
 }
 
 .date {
     font-size: 9px;
+    color: var(--primary_color);
 }
 
 #bottom_right_content {

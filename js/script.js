@@ -187,15 +187,7 @@ createApp({
         };
     },
     methods: {
-        // getLastMessage(index) {
-        //     const lastMessage = this.contacts[index].messages.filter((e) => {
-        //         return e.status === 'sent';
-        //     });
-        //     if (lastMessage.length > 0) {
-        //         return lastMessage[lastMessage.length - 1].message;
-        //     } else {
-        //         return '';
-        //     };
-        // }
+    },
+    computed: {
     }
 }).mount('#app');

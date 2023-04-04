@@ -51,10 +51,10 @@
                             </div>
                             <div class="chat_container w-100">
                                 <ul class="list-unstyled">
-                                    <li v-for="contact in contacts" :key="contact.id" @click="selectChat(contact)">
+                                    <li @click="selectedItem = index" v-for="(contact, index) in contacts" :key="contact.id">
                                         <a href="#" class="chat_box d-flex align-items-center position-relative text-decoration-none pt-2">
                                             <div class="chat_rounded_img mx-3">
-                                                <img class="w-100 rounded-circle" :src="contact.avatar" alt="avatar_img">
+                                                <img class="w-100 rounded-circle" :src="contact.avatar" :alt="contact.name">
                                             </div>
                                             <div class="d-flex flex-column w-100 pb-1">
                                                 <div class="text-white">{{contact.name}}</div>
@@ -73,10 +73,10 @@
                         <div id="top_right_content" class="d-flex justify-content-center align-items-center">
                             <div id="my_avatar" class="d-flex align-items-center">
                                 <div class="rounded_img mx-3">
-                                    <a href="#"><img class="w-100 rounded-circle" :src="selectedContact.avatar" :alt="selectedContact.name"></a>
+                                    <a href="#"><img class="w-100 rounded-circle" :src="contacts[selectedItem].avatar" :alt="contacts[selectedItem].name"></a>
                                 </div>
                                 <div class="d-flex flex-column">
-                                    <a class="text-decoration-none text-white" href="#"><span>{{selectedContact.name}}</span></a>
+                                    <a class="text-decoration-none text-white" href="#"><span>{{contacts[selectedItem].name}}</span></a>
                                     <div id="last_access" class="text-white">Ultimo accesso oggi alle 12:00</div>
                                 </div>
                             </div>
@@ -85,7 +85,14 @@
                                 <a href="#"><i class="fa-solid fa-magnifying-glass p-3"></i></a>
                             </div>
                         </div>
-                        <div id="main_right_content" class="w-100"></div>
+                        <div id="main_right_content" class="w-100 position-relative">
+                            <div class="container_message" v-for="(msg, index) in contacts[selectedItem].messages" :key="index">
+                                <div class="small">
+                                    <span class="message">{{msg.message}}</span>
+                                    <div class="date text-end">{{msg.date}}</div>
+                                </div>
+                            </div>
+                        </div>
                         <div id="bottom_right_content" class="w-100 d-flex align-items-center justify-content-between">
                             <div class="d-flex flex-row px-1">
                                 <a href="#"><i class="fa-regular fa-face-grin-wide"></i></a>

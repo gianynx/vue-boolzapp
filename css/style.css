@@ -164,6 +164,23 @@ CSS "Boolzapp"
     opacity: 0.5;
 }
 
+.container_message {
+    background-color: var(--icons_color);
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    border-radius: 11px;
+    padding: 5px 20px 5px 10px;
+}
+
+.message {
+    color: var(--main_left_content);
+}
+
+.date {
+    font-size: 9px;
+}
+
 #bottom_right_content {
     height: calc(100% - 37rem);
     background-color: var(--top_left_right_content);

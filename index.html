@@ -86,11 +86,13 @@
                             </div>
                         </div>
                         <div id="main_right_content" class="w-100">
-                            <div id="msg_container" class="position-relative" v-for="(msg, index) in contacts[selectedItem].messages" :key="index">
-                                <div :class="msg.status === 'sent' ? 'msg_container_sent' : 'msg_container_received'">
-                                    {{msg.message}}
-                                    <div class="date text-end pt-1">
-                                        {{msg.date}}
+                            <div id="msg_container" v-for="(msg, index) in contacts[selectedItem].messages" :key="index">
+                                <div :class="msg.status === 'sent' ? 'msg_container_sent' : 'msg_container_received'" class="mt-5">
+                                    <div id="message">
+                                        {{msg.message}}
+                                        <div class="date text-end pt-1">
+                                            {{msg.date}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>

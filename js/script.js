@@ -204,8 +204,11 @@ createApp({
             };
             responseMessage.date = responseMessage.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             setTimeout(() => {
-                this.contacts[this.selectedItem].messages.push(responseMessage)
-            }, 2000);
+                this.contacts[this.selectedItem].messages.push(responseMessage);
+                this.$nextTick(() => {
+                    this.$refs.items[this.$refs.items.length - 1].scrollIntoView();
+                });
+            }, 1000);
         }
     }
 }).mount('#app');

@@ -184,10 +184,20 @@ createApp({
         return {
             contacts: contacts,
             selectedItem: 0,
-            chatMessage: ''
+            chatMessage: '',
+            contactSearch: ''
         };
     },
     methods: {
+        filteredContacts() {
+            contacts.forEach((contact) => {
+                if (contact.name.toLowerCase().includes(this.contactSearch.toLowerCase())) {
+                    contact.visible = true;
+                } else {
+                    contact.visible = false;
+                };
+            });
+        },
         send() {
             const newMessage = {
                 date: new Date(2023, 4, 4),

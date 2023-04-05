@@ -198,9 +198,14 @@ createApp({
                     contact.visible = false;
                 };
             });
-        },
-        showArrow() {
             this.showElement = true;
+        },
+        showContacts() {
+            contacts.forEach((contact) => {
+                contact.visible = true;
+                this.showElement = false;
+                this.contactSearch = '';
+            });
         },
         send() {
             const newMessage = {

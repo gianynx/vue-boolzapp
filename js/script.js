@@ -185,7 +185,8 @@ createApp({
             contacts: contacts,
             selectedItem: 0,
             chatMessage: '',
-            contactSearch: ''
+            contactSearch: '',
+            showElement: false
         };
     },
     methods: {
@@ -197,6 +198,9 @@ createApp({
                     contact.visible = false;
                 };
             });
+        },
+        showArrow() {
+            this.showElement = true;
         },
         send() {
             const newMessage = {

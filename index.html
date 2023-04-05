@@ -47,9 +47,9 @@
                         <div id="main_left_content" class="w-100">
                             <div id="search_chat" class="w-100 d-flex justify-content-between align-items-center px-3">
                                 <input v-model="contactSearch" @keyup="filteredContacts()" id="search_start_chat" class="small" type="text" placeholder="Cerca o inizia una nuova chat"></input>
-                                <a href="#"><i class="fa-solid fa-bars-staggered"></i></a>
+                                <a href="chat_container"><i class="fa-solid fa-arrow-left d-none"@keyup="d-block && showArrow()"></i></a>
                             </div>
-                            <div class="chat_container w-100">
+                            <div class="chat_container w-100" id="chat_container">
                                 <ul class="list-unstyled">
                                     <li @click="selectedItem = index" v-for="(contact, index) in contacts" :key="contact.id" :class="{'d-none': !contact.visible}">
                                         <a href="#" class="chat_box d-flex align-items-center position-relative text-decoration-none pt-2">

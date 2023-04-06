@@ -1,3 +1,4 @@
+import Picker from './emoji-picker.js';
 const {createApp} = Vue;
 const contacts = [
     {
@@ -186,7 +187,8 @@ createApp({
             selectedItem: 0,
             chatMessage: '',
             contactSearch: '',
-            showElement: false
+            showElement: false,
+            showEmoji: false
         };
     },
     methods: {
@@ -212,6 +214,20 @@ createApp({
                 return contacts[index].messages[contacts[index].messages.length - 1].message;
             };
         },
+        onSelectEmoji(emoji) {
+            console.log(emoji)
+            this.chatMessage += emoji.i;
+        /*
+          // result
+          { 
+              i: "😚", 
+              n: ["kissing face"], 
+              r: "1f61a", // with skin tone
+              t: "neutral", // skin tone
+              u: "1f61a" // without tone
+          }
+        */
+        },
         send() {
             const newMessage = {
                 date: new Date(2023, 4, 4),
@@ -221,6 +237,7 @@ createApp({
             newMessage.date = newMessage.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             this.contacts[this.selectedItem].messages.push(newMessage);
             this.chatMessage = '';
+            this.showEmoji = false;
             const responseMessage = {
                 date: new Date(2023, 4, 4),
                 message: 'Okay',
@@ -235,4 +252,4 @@ createApp({
             }, 1000);
         }
     }
-}).mount('#app');
+}).component('Picker', Picker).mount('#app');

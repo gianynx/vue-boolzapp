@@ -23,7 +23,7 @@ CSS UTILITIES
 *****************************************************/
 
 .grid {
-    border: 2px solid white;
+    border: 2px solid var(--primary_color);
 }
 
 /*****************************************************
@@ -218,4 +218,35 @@ CSS "Boolzapp"
 
 .fa-microphone {
     padding-right: 11px;
+}
+
+.my_class {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    background-color: var(--top_left_right_content);
+}
+
+.v3-search input {
+    background-color: var(--top_left_right_content);
+}
+
+.v3-emoji-picker .v3-search input {
+    background-color: var(--chat_box_focus);
+    color: var(--primary_color);
+    border-style: none;
+}
+
+.v3-emoji-picker .v3-body .v3-body-inner .v3-group h5, .v3-emoji-picker .v3-skin-tones {
+    background-color: var(--top_left_right_content);
+    font-size: 15px;
+    color: var(--primary_color);
+}
+
+.v3-emoji-picker .v3-header {
+    border-bottom: none;
+}
+
+.v3-emoji-picker:hover {
+    background-color: var(--chat_box_hover);
 }

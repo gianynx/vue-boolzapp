@@ -207,6 +207,11 @@ createApp({
                 this.contactSearch = '';
             });
         },
+        getLastMessage(index) {
+            if (contacts[index].messages.length > 0) {
+                return contacts[index].messages[contacts[index].messages.length - 1].message;
+            };
+        },
         send() {
             const newMessage = {
                 date: new Date(2023, 4, 4),

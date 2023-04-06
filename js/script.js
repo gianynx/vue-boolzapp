@@ -179,11 +179,39 @@ const contacts = [
         ],
     }
 ];
+const myMessages = [
+        'Che cosa vuoi?',
+        'Oggi cosa cucini?',
+        'Come ti chiami?',
+        'Come stai?',
+        'Sei fidanzato?',
+        'Sei fidanzata?',
+        'Ancora che mi scrivi?',
+        'Scusami, ma non voglio essere disturbato',
+        'Scusami, ma non voglio essere disturbata',
+        'Forza Juve!',
+        'Cosa fai questa sera?',
+        'Che tipo di musica ascolti?',
+        'Non ti voglio rispondere, sto impazzendo!',
+        'Vuoi uscire con me?',
+        'Cosa farai questo weekend?',
+        'Vuoi venire a cena con me?',
+        'Cosa farai sabato sera?',
+        'Vogliamo studiare insieme?',
+        'Ti va di bere una cosa?',
+        'Ma sei fuori di testa?',
+        'Ma che problemi hai?',
+        'Io sono una persona difficile da capire, non mi disturbare',
+        'Non mi scrivere, per favore',
+        'Chiamami appena puoi, ne parliamo a voce',
+        'Ti rispondo solo se sei una persona educata e cortese'
+];
 
 createApp({
     data() {
         return {
             contacts: contacts,
+            myMessages: myMessages,
             selectedItem: 0,
             chatMessage: '',
             contactSearch: '',
@@ -238,11 +266,14 @@ createApp({
             this.contacts[this.selectedItem].messages.push(newMessage);
             this.chatMessage = '';
             this.showEmoji = false;
+            let randomIndex = Math.floor(Math.random() * myMessages.length);
+            let randomMessage = myMessages[randomIndex]; // estrazione del messaggio corrispondente all'indice casuale
             const responseMessage = {
                 date: new Date(2023, 4, 4),
-                message: 'Okay',
+                message: randomMessage,
                 status: 'received'
             };
+            console.log(responseMessage);
             responseMessage.date = responseMessage.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             setTimeout(() => {
                 this.contacts[this.selectedItem].messages.push(responseMessage);

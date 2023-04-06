@@ -204,7 +204,12 @@ const myMessages = [
         'Io sono una persona difficile da capire, non mi disturbare',
         'Non mi scrivere, per favore',
         'Chiamami appena puoi, ne parliamo a voce',
-        'Ti rispondo solo se sei una persona educata e cortese'
+        'Ti rispondo solo se sei una persona educata e cortese',
+        'Ancora che mi scrivi?',
+        'Life is a journey, not a destination?',
+        'Ma la smetti?',
+        'Ancora che insisti?',
+        "Basta ora spengo l'internet!"
 ];
 
 createApp({

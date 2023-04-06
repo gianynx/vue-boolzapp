@@ -250,3 +250,16 @@ CSS "Boolzapp"
 .v3-emoji-picker:hover {
     background-color: var(--chat_box_hover);
 }
+
+/*****************************************************
+MEDIA QUERY
+*****************************************************/
+
+@media screen and (max-width: 1250px) {
+    #right_content {
+        display: none;
+    }
+    .fa-angles-left {
+        display: block;
+    }
+}

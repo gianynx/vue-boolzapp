@@ -278,7 +278,6 @@ createApp({
                 message: randomMessage,
                 status: 'received'
             };
-            console.log(responseMessage);
             responseMessage.date = responseMessage.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             setTimeout(() => {
                 this.contacts[this.selectedItem].messages.push(responseMessage);
